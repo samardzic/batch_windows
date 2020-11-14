@@ -16,7 +16,7 @@ set APPIUM_OPTIONS=--allow-cors --log-timestamp
 
 
 
-:: Start Appium server
+:: Start Appium serverr
 :: /************************************************************************************/
 echo.
 ECHO ===== Starting Appium server =====
