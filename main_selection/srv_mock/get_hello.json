@@ -1,0 +1,32 @@
+{
+	"identifier": {
+		"countryCode": "DE",
+		"manufacturer": "BMW"
+	},
+	"dtcs": [
+		{
+			"dtcId": "801A55",
+			"ecuAddress": "FZD_20",
+			"ecuVariantName": "VIP_G05",
+			"dtcDescription": " 801A55 DTC Description From INDium",
+			"language": "en-GB",
+			"ecuId": "86"
+		},
+		{
+			"dtcId": "31786",
+			"ecuAddress": "ATM",
+			"ecuVariantName": "VIP_G05",
+			"dtcDescription": " 31786 DTC Description From INDium",
+			"language": "en-GB",
+			"ecuId": "86"
+		},
+		{
+			"dtcId": "804840",
+			"ecuAddress": "REM_20",
+			"ecuVariantName": "VIP_G05",
+			"dtcDescription": " 804840 DTC Description From INDium",
+			"language": "en-GB",
+			"ecuId": "114"
+		}
+	]
+}

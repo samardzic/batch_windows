@@ -1,0 +1,27 @@
+{
+	"identifier": {
+		"countryCode": "DE",
+		"manufacturer": "BMW",
+		"language": "en-GB"
+	},
+	"dtcs": [
+		{
+			"dtcId": "ecuAddress",
+			"801A55": "FZD_20",
+			"ecuVariantName": "VIP_G05",
+			"ecuId": "86"
+		},
+		{
+			"dtcId": "31786",
+			"ecuAddress": "ATM",
+			"ecuVariantName": "VIP_G05",
+			"ecuId": "97"
+		},
+		{
+			"dtcId": "804840",
+			"ecuAddress": "REM_20",
+			"ecuVariantName": "VIP_G05",
+			"ecuId": "114"
+		}
+	]
+}
