@@ -11,12 +11,12 @@ set REPO_LOCATION=c:/Build/gnuCash/
 :: Navigate to repo location
 :: /************************************************************************************/
 ECHO  ===== Navigate to repo location =====
-call cd %APPPACKAGE%
+call cd %REPO_LOCATION% & lazygit.exe
 echo.
 
 
 
 ECHO --- Start LazyGit ---
-call start cmd /k lazygit.exe
+:: call start cmd /k lazygit.exe
 echo.
 :: /************************************************************************************/
