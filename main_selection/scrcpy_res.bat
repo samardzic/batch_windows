@@ -1,7 +1,6 @@
 :: ==================================================================================
 :: NAME     : ScrCpy startup script
 :: AUTHOR   : Nenad Samardzic
-:: VERSION  : 0.0.1
 :: ==================================================================================
 @echo off
 
@@ -16,7 +15,8 @@ echo.
 ECHO ===== Starting SCRCPY =====
 echo.
 
-ECHO --- CD to App Folder ---
+ECHO --- CD to ScrCpy App Folder ---
+call d:
 call cd %SCRCPY_PATH%
 echo.
 

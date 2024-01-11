@@ -1,0 +1,65 @@
+
+Jenkins script console
+=======================
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-same-origin allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src *")
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox; img-src 'self';")
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP","")
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; img-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline';")
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';base-uri 'self';form-action 'self' ")
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'self'; style-src 'self' 'unsafe-inline';")
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "default-src 'unsafe-inline' 'unsafe-eval'; script-src 'self' * 'unsafe-eval'; connect-src 'self'; img-src 'self' 'unsafe-inline' data:; style-src 'self' 'unsafe-inline';base-uri 'self';form-action 'self'")
+
+
+System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
+System.clearProperty("hudson.model.DirectoryBrowserSupport.CSP")
+System.getProperty("hudson.model.DirectoryBrowserSupport.CSP")
+
+
+
+
+
+
+jenkins.xml
+============
+<arguments>-Xrs -Xmx256m -Dhudson.lifecycle=hudson.lifecycle.WindowsServiceLifecycle -Dhudson.model.DirectoryBrowserSupport.CSP="sandbox allow-scripts; default-src 'self'; style-src 'self' 'unsafe-inline';" -jar "%BASE%\jenkins.war" --httpPort=8080 --webroot="%BASE%\war"</arguments
+
+
+
+Jenkins Runner options
+========================
+set HUDSON_CSP_SHORT=-Dhudson.model.DirectoryBrowserSupport.CSP=""
+set HUDSON_CSP_V1=-Xrs -Xms4096m -Xmx4096m -Dhudson.model.DirectoryBrowserSupport.CSP="sandbox allow-same-origin allow-scripts; default-src 'self'; script-src * 'unsafe-eval'; img-src *; style-src * 'unsafe-inline'; font-src * data:"
+set HUDSON_CSP_V3=-Xrs -Xms4096m -Xmx4096m -Dhudson.model.DirectoryBrowserSupport.CSP="sandbox allow-same-origin allow-scripts; default-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-eval'; img-src 'self' 'unsafe-inline' data:; style-src * 'unsafe-inline'; font-src * data:"
+-Dhudson.model.DirectoryBrowserSupport.CSP="default-src 'self'; style-src 'unsafe-inline'
+
+set HUDSON_CSP_V1=
+	-Dhudson.model.DirectoryBrowserSupport.CSP=
+		"sandbox allow-same-origin allow-scripts; 
+		default-src 'self'; 
+		script-src * 'unsafe-eval'; 
+		img-src *; 
+		style-src * 'unsafe-inline'; 
+		font-src * data:"
+
+
+
+set HUDSON_CSP_V2=
+	-Xrs -Xms2048m -Xmx2048m 
+	-Dhudson.model.DirectoryBrowserSupport.CSP=
+		"sandbox allow-same-origin allow-scripts; 
+		default-src 'self'; 
+		script-src * 'unsafe-eval'; 
+		img-src *; 
+		style-src * 'unsafe-inline'; 
+		font-src * data:"
+
+
+set HUDSON_CSP_V3=
+	-Xrs -Xms4096m -Xmx4096m 
+	-Dhudson.model.DirectoryBrowserSupport.CSP=
+	"sandbox allow-same-origin allow-scripts; 
+	default-src 'self' 'unsafe-inline' 'unsafe-eval'; 
+	script-src * 'unsafe-eval'; 
+	img-src 'self' 'unsafe-inline' data:; 
+	style-src * 'unsafe-inline'; 
+	font-src * data:"
