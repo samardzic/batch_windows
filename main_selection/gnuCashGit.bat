@@ -10,7 +10,8 @@ set REPO_LOCATION=c:/Build/gnuCash
 :: /************************************************************************************/
 
 ECHO  ===== Navigate to repo location and Start LazyGit =====
- call cd %REPO_LOCATION% && lazygit.exe
+call c:
+call cd %REPO_LOCATION% && lazygit.exe
 echo.
 =======
 :: ECHO  ===== Navigate to repo location =====
