@@ -5,7 +5,7 @@
 @echo off
 
 set SHORTCUTS_FOLDER=C:\Users\Public\Desktop
-set file = "Employee Self Service.url"
+set files_list="Employee Self Service.url","Facility Ticket.url","MO Chatbot.url","SMT Web - Home.website","Password Safe.lnk"
 
 :: "Employee Self Service.url"
 :: "Facility Ticket.url"
@@ -21,17 +21,28 @@ ECHO ===== Starting Deletion process =====
 echo.
 echo.
 
+
+:: CD to Working Directory
+:: /************************************************************************************/
 ECHO --- CD to Folder containing shortcuts ---
 call c:
 call cd %SHORTCUTS_FOLDER%
+echo.
+echo.
 
 
+:: Execute Deletion
+:: /************************************************************************************/
 ECHO --- Execute Delete command ---
-call powershell Remove-Item "'Employee Self Service.url'"
-call powershell Remove-Item "'Facility Ticket.url'"
-call powershell Remove-Item "'MO Chatbot.url'"
-call powershell Remove-Item "'SMT Web - Home.website'"
-call powershell Remove-Item "'Password Safe.lnk'"
+for %%G in (%files_list%) do (
+	if exist %%G (
+		del %%G
+		echo. File %%G found and deleted
+	) else (
+		echo. *** Error - file %%G not found ***
+	)
+)
+
 
 
 :: call timeout 10
