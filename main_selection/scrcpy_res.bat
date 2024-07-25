@@ -1,6 +1,5 @@
 :: ==================================================================================
 :: NAME     : ScrCpy startup script
-:: AUTHOR   : Nenad Samardzic
 :: ==================================================================================
 @echo off
 
@@ -22,7 +21,9 @@ echo.
 
 
 ECHO --- Execute command ---
-call start cmd /k scrcpy -m 1920
+:: call start cmd /k scrcpy -m 1920
+cmd.exe /c start /min cmd /k scrcpy -m 1920
+
 :: call start cmd /k scrcpy -m 1600
 :: call start cmd /k scrcpy -m 1440
 :: call start cmd /k scrcpy -m 1280

@@ -1,7 +1,6 @@
 :: ==================================================================================
 :: NAME     : ADB logcat output
-:: AUTHOR   : Nenad Samardzic
-:: VERSION  : 0.0.1
+:: DESC     : Script for displaying LogCat data
 :: ==================================================================================
 @echo off
 
@@ -36,13 +35,10 @@ echo.
 cd \
 
 ECHO --- Appium server run ---
+:: call start cmd /k adb shell ps | grep %APPPACKAGE% | cut -c10-15
 :: call start cmd /k adb logcat time %APPPACKAGE%:W 
 :: call start cmd /k adb logcat -s Unity ActivityManager PackageManager dalvikvm DEBUG -v color
 call start cmd /k adb logcat Unity %PACKAGEMNG% %ACTIVITYMNG1% DEBUG -v color
 
-
-:: call start cmd /k adb shell ps | grep %APPPACKAGE% | cut -c10-15
-
-:: call start cmd /k adb logcat -p %APPIUM_PORT% -a %APPIUM_ADDRESS% %APPIUM_OPTIONS% %APPIUM_CONF_PORTS%
 echo.
 :: /************************************************************************************/

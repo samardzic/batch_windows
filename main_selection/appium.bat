@@ -1,13 +1,13 @@
 :: ==================================================================================
-:: NAME     : Integration
-:: AUTHOR   : Nenad Samardzic
-:: VERSION  : 0.0.1
+:: NAME     : Appium runner script
+:: DESC     : Script for running appium server with custom parameters
 :: ==================================================================================
 @echo off
 
 set APPIUM_PORT=4723
 set APPIUM_ADDRESS=0.0.0.0
 set APPIUM_CONF_PORTS=--webdriveragent-port 8100 --bootstrap-port 4724
+:: set APPIUM_OPTIONS=--relaxed-security --allow-cors --log-timestamp --session-override
 :: set APPIUM_OPTIONS=--relaxed-security --allow-cors --log-timestamp
 set APPIUM_OPTIONS=--allow-cors --log-timestamp
 

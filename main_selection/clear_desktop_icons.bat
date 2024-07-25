@@ -5,13 +5,14 @@
 @echo off
 
 set SHORTCUTS_FOLDER=C:\Users\Public\Desktop
-set files_list="Employee Self Service.url","Facility Ticket.url","MO Chatbot.url","SMT Web - Home.website","Password Safe.lnk"
+set files_list="Employee Self Service.url","Facility Ticket.url","MO Chatbot.url","SMT Web - Home.website","Password Safe.lnk","Local IT FAQ.url"
 
 :: "Employee Self Service.url"
 :: "Facility Ticket.url"
 :: "MO Chatbot.url"
 :: "SMT Web - Home.website"
 :: "Password Safe.lnk"
+:: "Local IT FAQ.url"
 
 
 :: Start Files Deletion
