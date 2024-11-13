@@ -1,0 +1,9 @@
+MouseInfo
+pillow
+PyAutoGUI
+PyGetWindow
+PyMsgBox
+pyperclip
+PyRect
+PyScreeze
+pytweening
