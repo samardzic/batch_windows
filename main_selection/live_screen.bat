@@ -3,8 +3,8 @@
 :: ==================================================================================
 @echo off
 
-set PROJECT_LOCATION=c:/Build/mouse_move/mouse_emulation
-set VENV_LOCATION=c:/Build/mouse_move/mouse_emulation/venv/Scripts
+set PROJECT_LOCATION=c:/Build/batch_windows/mouse_move/mouse_emulation
+set VENV_LOCATION=c:/Build/batch_windows/mouse_move/mouse_emulation/venv/Scripts
 set SCRIPT_NAME=script_new.py
 
 
